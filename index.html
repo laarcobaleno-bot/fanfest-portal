@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>ФанФест ПОРТАЛ | Фестиваль в Среднеуральске</title>
+    <meta name="description" content="ФанФест ПОРТАЛ — фестиваль в Среднеуральске. 31 июля — 2 августа 2026. Магия, порталы, музыка, еда и невероятная атмосфера.">
+    <meta name="keywords" content="фестиваль, Среднеуральск, портал, магия, ФанФест">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/portal.png">
+    <!-- Защита от кражи домена (с поддержкой localhost) -->
+    <link href="https://laarcobaleno-bot.github.io/fanfest-portal/" rel="canonical">
+    <script>
+        const hostname = location.hostname;
+        if (hostname !== 'laarcobaleno-bot.github.io' &&
+            hostname !== 'fanfest-portal.ru' &&
+            hostname !== 'localhost' &&
+            !hostname.startsWith('127.0.0.1')) {
+            window.location.href = 'https://laarcobaleno-bot.github.io/fanfest-portal/';
+        }
+    </script>
+</head>
+<body>
+
+    <!-- НАВИГАЦИЯ -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="img/portal.png" alt="ФанФест ПОРТАЛ" class="logo-img" id="nav-logo">
+                <span>ФанФест ПОРТАЛ</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Домашняя</a></li>
+                <li><a href="#how-to-get" class="nav-link">Как добраться</a></li>
+                <li><a href="#parking" class="nav-link">Парковка</a></li>
+                <li><a href="#rules" class="nav-link">Правила</a></li>
+                <li><a href="#fair" class="nav-link">Ярмарка</a></li>
+                <li><a href="#tickets" class="nav-link">Билеты</a></li>
+                <li><a href="#menu" class="nav-link">Питание</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- ГЛАВНЫЙ ЭКРАН С ПОРТАЛОМ -->
+        <section id="home" class="section hero-section">
+            <div class="portal-glow-bg"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <img src="img/portal.png" alt="ФанФест ПОРТАЛ" class="hero-logo" id="hero-logo">
+                    <h1 class="gothic-title">ФанФест <span class="neon">ПОРТАЛ</span></h1>
+                    <p class="subtitle">Среднеуральск | 31 июля — 2 августа 2026</p>
+                    <div class="magic-line"></div>
+                    <p class="description">Это не просто фестиваль. Это переход в другую реальность.</p>
+                    <a href="https://сплавимвсех.рф/ank_pm" target="_blank" class="cta-btn">✨ Купить билет ✨</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- КАК ДОБРАТЬСЯ -->
+        <section id="how-to-get" class="section">
+            <div class="container">
+                <h2 class="section-title">🗺 Как добраться</h2>
+                <div class="content-card">
+                    <div class="transport-grid">
+                        <div class="transport-item"><div class="transport-icon">🚗</div><h3>Личный транспорт</h3><p>На полигоне организована парковка</p></div>
+                        <div class="transport-item"><div class="transport-icon">🚌</div><h3>Общественный транспорт</h3><p>Далее пеший маршрут с подробной разметкой</p></div>
+                        <div class="transport-item"><div class="transport-icon">🚕</div><h3>Такси</h3><p>Спокойно ездит до полигона и обратно</p></div>
+                    </div>
+                    <div class="map-links">
+                        <h3>📱 Подробные Я-Карты:</h3>
+                        <a href="https://yandex.ru/maps/?um=constructor%3Af1e83cdcfa0b4ee1eb1766f7b3470e3e419ff49a3742c79af5fab66ce17bb5e5&source=constructorLink" target="_blank" class="map-link">🚶 Пеший маршрут</a>
+                        <a href="https://yandex.ru/maps/?um=constructor%3Ab1f1d79fec8620eb3f8fee973d7af1df5fb7c4dfa31701912e10fffa608b0370&source=constructorLink" target="_blank" class="map-link">🚗 Авто маршрут</a>
+                    </div>
+                    <div class="coordinates">
+                        <p><strong>📍 Главный вход:</strong> 56.964654, 60.466934</p>
+                        <p><strong>🚕 Для такси:</strong> 56.965918, 60.463345 (СНТ Высота)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ПАРКОВКА -->
+        <section id="parking" class="section">
+            <div class="container">
+                <h2 class="section-title">🅿️ Парковка</h2>
+                <div class="content-card">
+                    <p class="parking-free"><strong>Бесплатная парковка</strong> вдоль дороги у главного входа на полигон</p>
+                    <ul class="parking-rules">
+                        <li>✅ Вмещает порядка <strong>75 авто</strong></li>
+                        <li>✅ Размещайтесь по разметке</li>
+                        <li>✅ Не перекрывайте техвъезд</li>
+                        <li>❌ Въезд на полигон и в лагерь запрещен</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ПРАВИЛА -->
+        <section id="rules" class="section">
+            <div class="container">
+                <h2 class="section-title">📜 Правила фестиваля</h2>
+                <div class="rules-grid">
+                    <div class="rule-category"><h3>👥 Гости</h3><p>От 12 лет (до 12 — бесплатно). До 16 лет — только с родителями.</p></div>
+                    <div class="rule-category"><h3>📄 Документы</h3><p>Паспорт и медполис обязательны.</p></div>
+                    <div class="rule-category"><h3>🏥 Медицина</h3><p>На полигоне дежурит фельдшер.</p></div>
+                    <div class="rule-category"><h3>🐕 Животные</h3><p>Только по согласованию, на поводке.</p></div>
+                    <div class="rule-category"><h3>🚫 Запрещено</h3><p>Оружие, алкоголь, открытый огонь вне зон.</p></div>
+                    <div class="rule-category"><h3>🌿 Экология</h3><p>Не мусорить, сохраняйте природу.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ЯРМАРКА -->
+        <section id="fair" class="section">
+            <div class="container">
+                <h2 class="section-title">🎪 Ярмарка</h2>
+                <div class="content-card">
+                    <p><strong>Место:</strong> Большой Шатер <strong>Бесплатно!</strong></p>
+                    <div class="fair-rules">
+                        <div><h3>✅ Можно:</h3><ul><li>Ручная работа</li><li>Изделия по своим лекалам</li></ul></div>
+                        <div><h3>❌ Нельзя:</h3><ul><li>Перепродажа</li><li>Запрещённая символика</li></ul></div>
+                    </div>
+                    <div class="fair-apply">
+                        <h3>📝 Заявки до конца июня</h3>
+                        <p>Отправьте Юлии: имя, описание, 3-5 фото, кол-во мест, нужна ли электричество</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- БИЛЕТЫ -->
+        <section id="tickets" class="section">
+            <div class="container">
+                <h2 class="section-title">🎟 Билеты</h2>
+                <div class="tickets-container">
+                    <div class="ticket-type">
+                        <h3>🏕 Трёхдневный</h3>
+                        <div class="ticket-card"><span>Полный</span><span class="price">3 490₽</span></div>
+                        <div class="ticket-card"><span>Детский</span><span class="price">2 490₽</span></div>
+                    </div>
+                    <div class="ticket-type">
+                        <h3>🎪 Однодневный</h3>
+                        <div class="ticket-card"><span>Полный</span><span class="price">2 490₽</span></div>
+                        <div class="ticket-card"><span>Детский</span><span class="price">1 490₽</span></div>
+                    </div>
+                </div>
+                <div class="payment-info">
+                    <p>👶 Дети до 12 лет — <strong>бесплатно</strong></p>
+                    <p>🍽 В стоимость <strong>включено питание</strong> (7 приёмов для трёхдневного, 3 — для однодневного)</p>
+                    <a href="https://сплавимвсех.рф/ank_pm" target="_blank" class="buy-btn">💳 Купить билет</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ПИТАНИЕ -->
+        <section id="menu" class="section">
+            <div class="container">
+                <h2 class="section-title">🍽 Меню</h2>
+                <div class="menu-tabs">
+                    <button class="tab-btn active" onclick="showTab('common')">🍖 Основное</button>
+                    <button class="tab-btn" onclick="showTab('veggie')">🥬 Вегетарианское</button>
+                </div>
+                <div id="common-menu" class="menu-content active">
+                    <div class="menu-day"><h3>📅 31 июля</h3><p>Похлёбка, "Королевский Пир"</p></div>
+                    <div class="menu-day"><h3>📅 1 августа</h3><p>Гречка с мясом, Солянка, Жаркое, Морс</p></div>
+                    <div class="menu-day"><h3>📅 2 августа</h3><p>Курица в сливках, Борщ</p></div>
+                </div>
+                <div id="veggie-menu" class="menu-content">
+                    <div class="menu-day"><h3>📅 31 июля</h3><p>Минестроне, "Королевский Пир"</p></div>
+                    <div class="menu-day"><h3>📅 1 августа</h3><p>Гречка с овощами, Фасолевый суп, Рагу, Морс</p></div>
+                    <div class="menu-day"><h3>📅 2 августа</h3><p>Картофель с песто, Борщ вегетарианский</p></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="img/portal.png" alt="ФанФест ПОРТАЛ" class="footer-logo-img" id="footer-logo">
+                    <span>ФанФест ПОРТАЛ</span>
+                </div>
+                <div class="footer-links">
+                    <a href="https://vk.com/fun_fest_portal" target="_blank">📱 VK ФанФест Портал</a>
+                    <a href="mailto:info@fanfest-portal.ru">📧 info@fanfest-portal.ru</a>
+                    <a href="tel:+79991234567">📞 +7 (999) 123-45-67</a>
+                </div>
+                <div class="footer-copy">© 2026 · Среднеуральск · Переход в другую реальность</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- АУДИО -->
+    <audio id="portalSound" src="sounds/portal.mp3" preload="auto"></audio>
+    <audio id="hoverSound" src="sounds/hover.mp3" preload="auto"></audio>
+    <audio id="clickSound" src="sounds/click.mp3" preload="auto"></audio>
+
+    <!-- КАБАН (левый нижний угол) -->
+    <div class="mascot-left">
+        <img src="img/boar.png" id="boar" alt="Магический кабан">
+        <div class="speech" id="speech">Эй… ты точно готов к порталу?</div>
+    </div>
+
+    <!-- QR2 (правый верхний угол, под навигацией) -->
+    <div class="mascot-top-right">
+        <a href="https://vk.com/fun_fest_portal" target="_blank" id="qr-link">
+            <img src="img/qr2.png" id="qr-image" alt="QR код VK ФанФест Портал">
+        </a>
+        <div class="speech-qr" id="speech-qr">Нажми, чтобы перейти в VK ✨</div>
+    </div>
+
+    <script src="JS/script.js"></script>
+</body>
+</html>
