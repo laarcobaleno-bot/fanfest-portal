@@ -183,22 +183,6 @@ if (boar) {
     });
 }
 
-// ===== QR2 =====
-const qrImage = document.getElementById('qr-image');
-const qrSpeech = document.getElementById('speech-qr');
-let qrTimeout = null;
-
-if (qrImage) {
-    qrImage.addEventListener('mouseenter', () => {
-        if (qrTimeout) clearTimeout(qrTimeout);
-        qrSpeech.style.display = 'block';
-    });
-    qrImage.addEventListener('mouseleave', () => {
-        qrTimeout = setTimeout(() => { qrSpeech.style.display = 'none'; }, 500);
-    });
-    qrImage.addEventListener('click', () => { playClickSound(); });
-}
-
 // ===== ПЛАВАЮЩИЕ ОБЪЕКТЫ =====
 if (!document.querySelector('.floating-objects')) {
     const floatingContainer = document.createElement('div');
