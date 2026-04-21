@@ -192,13 +192,11 @@ section {
     width: 35vmin;
     height: 35vmin;
     transform: translate(-50%, -50%);
-
     background: radial-gradient(circle,
         rgba(255, 255, 255, 0.6) 0%,
         rgba(255, 255, 255, 0.25) 25%,
         rgba(255, 255, 255, 0.08) 45%,
         transparent 70%);
-
     border-radius: 50%;
     filter: blur(40px);
     animation: portalWhitePulse 3s ease-in-out infinite;
@@ -260,6 +258,7 @@ section {
     color: #b388ff;
     letter-spacing: 2px;
     text-shadow: none;
+    line-height: 1.4;
 }
 
 .magic-line {
@@ -353,9 +352,10 @@ section {
     margin-top: 1rem;
 }
 
+/* ===== ПРАВИЛА ===== */
 .rules-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 1.5rem;
 }
 
@@ -373,11 +373,29 @@ section {
     border-left-color: #b388ff;
 }
 
-.fair-rules {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    margin: 1rem 0;
+.rule-category h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.rule-category p {
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+/* ===== ЯРМАРКА ===== */
+.fair-rules-single {
+    margin: 20px 0;
+}
+
+.fair-rules-single ul {
+    padding-left: 25px;
+    margin: 10px 0;
+}
+
+.fair-rules-single li {
+    margin: 8px 0;
+    line-height: 1.4;
 }
 
 .fair-apply {
@@ -387,9 +405,19 @@ section {
     margin-top: 1rem;
 }
 
+.fair-apply ul {
+    padding-left: 25px;
+    margin: 10px 0;
+}
+
+.fair-apply li {
+    margin: 5px 0;
+}
+
+/* ===== БИЛЕТЫ ===== */
 .tickets-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
 }
 
@@ -403,22 +431,49 @@ section {
 .ticket-card {
     display: flex;
     justify-content: space-between;
-    padding: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 12px 16px;
     background: rgba(0,0,0,0.5);
     margin: 8px 0;
     border-radius: 12px;
     transition: all 0.3s ease;
-    box-shadow: none;
+    /* Убираем рамку и заливку */
+    border: none;
 }
 
 .ticket-card:hover {
-    background: rgba(138, 43, 226, 0.2);
+    background: rgba(138, 43, 226, 0.1);
     transform: translateX(5px);
 }
 
-.price {
+.ticket-card span {
+    flex: 1;
+    min-width: 120px;
+    font-size: 0.9rem;
+    color: #f5e6d3;
+}
+
+.ticket-card .date {
+    color: #aaa;
+    font-size: 0.8rem;
+    min-width: 100px;
+    text-align: center;
+}
+
+.ticket-card .price {
     color: #b388ff;
-    font-weight: bold;
+    font-weight: normal;
+    font-size: 0.9rem;
+    min-width: 80px;
+    text-align: right;
+}
+
+.ticket-card.warning {
+    background: rgba(0,0,0,0.5);
+    /* Убираем рамку у предупреждения тоже */
+    border: none;
 }
 
 .payment-info {
@@ -429,11 +484,46 @@ section {
     border-radius: 20px;
 }
 
+/* Мобильная версия для билетов */
+@media (max-width: 768px) {
+    .tickets-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .ticket-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .ticket-card span {
+        width: 100%;
+        min-width: auto;
+        font-size: 0.85rem;
+    }
+
+    .ticket-card .date {
+        text-align: left;
+        min-width: auto;
+        font-size: 0.75rem;
+    }
+
+    .ticket-card .price {
+        text-align: left;
+        min-width: auto;
+        font-size: 0.9rem;
+        margin-top: 5px;
+        color: #b388ff;
+    }
+}
+
+/* ===== ПИТАНИЕ ===== */
 .menu-tabs {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    margin-bottom: 2rem;
+    margin: 30px 0 20px;
 }
 
 .tab-btn {
@@ -444,6 +534,11 @@ section {
     color: white;
     cursor: pointer;
     box-shadow: none;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+    background: rgba(138, 43, 226, 0.3);
 }
 
 .tab-btn.active {
@@ -460,9 +555,28 @@ section {
 
 .menu-day {
     background: rgba(0,0,0,0.5);
-    padding: 1rem;
+    padding: 1.2rem;
     margin: 1rem 0;
     border-radius: 20px;
+}
+
+.menu-day h3 {
+    color: #b388ff;
+    margin-bottom: 10px;
+}
+
+.menu-day p {
+    margin: 5px 0;
+    line-height: 1.4;
+}
+
+.chef-note {
+    margin-top: 30px;
+    padding: 1.5rem;
+    background: rgba(138, 43, 226, 0.15);
+    border-radius: 20px;
+    text-align: center;
+    border-left: 3px solid #b388ff;
 }
 
 /* ===== ФУТЕР ===== */
@@ -492,6 +606,11 @@ section {
 .footer-links a {
     color: #b388ff;
     text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    text-shadow: 0 0 8px #8a2be2;
 }
 
 /* ===== КАБАН (левый нижний угол) ===== */
@@ -506,10 +625,15 @@ section {
 }
 
 #boar {
-    width: 100px;
+    width: 160px;
     animation: floatBoar 3s ease-in-out infinite;
     cursor: pointer;
     filter: drop-shadow(0 0 10px #8a2be2);
+    transition: transform 0.3s ease;
+}
+
+#boar:hover {
+    transform: scale(1.05);
 }
 
 @keyframes floatBoar {
@@ -525,49 +649,6 @@ section {
     margin-top: 10px;
     font-size: 12px;
     max-width: 180px;
-    text-align: center;
-    display: none;
-    box-shadow: 0 0 10px #8a2be2;
-}
-
-/* ===== QR2 (правый верхний угол) ===== */
-.mascot-top-right {
-    position: fixed;
-    top: 80px;
-    right: 20px;
-    z-index: 998;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#qr-image {
-    width: 60px;
-    height: auto;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    filter: drop-shadow(0 0 10px #8a2be2);
-    animation: floatQR 3s ease-in-out infinite;
-}
-
-#qr-image:hover {
-    transform: scale(1.1);
-    filter: drop-shadow(0 0 15px #b388ff);
-}
-
-@keyframes floatQR {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
-}
-
-.speech-qr {
-    background: rgba(0,0,0,0.9);
-    border: 1px solid #8a2be2;
-    padding: 6px 10px;
-    border-radius: 15px;
-    margin-top: 8px;
-    font-size: 11px;
-    max-width: 150px;
     text-align: center;
     display: none;
     box-shadow: 0 0 10px #8a2be2;
@@ -624,7 +705,7 @@ section {
     box-shadow: 0 0 25px #b388ff;
 }
 
-/* ===== АДАПТИВ ===== */
+/* ===== АДАПТИВ (МОБИЛЬНЫЕ УСТРОЙСТВА) ===== */
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
@@ -640,23 +721,11 @@ section {
         text-align: center;
         transition: 0.3s;
         padding: 2rem;
+        gap: 1.5rem;
     }
 
     .nav-menu.active {
         left: 0;
-    }
-
-    .fair-rules {
-        grid-template-columns: 1fr;
-    }
-
-    .section-title {
-        font-size: 2rem;
-    }
-
-    .hero-logo {
-        width: 80px;
-        height: 80px;
     }
 
     .hero-section {
@@ -667,35 +736,65 @@ section {
         margin-top: 60px;
     }
 
-    .cta-btn, .buy-btn {
-        margin-top: 30px;
-        padding: 12px 25px;
-        font-size: 0.95rem;
+    .hero-logo {
+        width: 80px;
+        height: 80px;
     }
 
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .cta-btn, .buy-btn {
+        padding: 12px 25px;
+        font-size: 0.95rem;
+        margin-top: 30px;
+    }
+
+    .rules-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tickets-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* Адаптивные цены для мобильных */
+    .ticket-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .ticket-card span {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .ticket-card .date {
+        text-align: left;
+        min-width: auto;
+    }
+
+    .ticket-card .price {
+        text-align: left;
+        min-width: auto;
+        font-size: 1.2rem;
+        margin-top: 5px;
+    }
+
+    /* Кабан на мобильных */
     .mascot-left {
         bottom: 10px;
         left: 10px;
     }
 
     #boar {
-        width: 70px;
+        width: 120px;
     }
 
-    .mascot-top-right {
-        top: 60px;
-        right: 10px;
-    }
-
-    #qr-image {
-        width: 45px;
-    }
-
-    .speech-qr {
-        font-size: 9px;
-        max-width: 120px;
-    }
-
+    /* Кнопка наверх на мобильных */
     #scroll-top-btn {
         bottom: 100px;
         left: 10px;
@@ -717,6 +816,21 @@ section {
     .payment-info p {
         font-size: 0.9rem;
     }
+
+    .menu-tabs {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .tab-btn {
+        width: 80%;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -735,5 +849,9 @@ section {
 
     .payment-info p {
         font-size: 0.85rem;
+    }
+
+    #boar {
+        width: 100px;
     }
 }
