@@ -9,15 +9,15 @@
     <link rel="stylesheet" href="CSS/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="img/portal.png">
-    <!-- Защита от кражи домена (с поддержкой localhost) -->
-    <link href="https://laarcobaleno-bot.github.io/fanfest-portal/" rel="canonical">
+    <!-- Защита от кражи домена (обновлено для нового адреса) -->
+    <link href="https://fanfestportal-bot.github.io/fanfest-portal/" rel="canonical">
     <script>
         const hostname = location.hostname;
-        if (hostname !== 'laarcobaleno-bot.github.io' &&
+        if (hostname !== 'fanfestportal-bot.github.io' &&
             hostname !== 'fanfest-portal.ru' &&
             hostname !== 'localhost' &&
             !hostname.startsWith('127.0.0.1')) {
-            window.location.href = 'https://laarcobaleno-bot.github.io/fanfest-portal/';
+            window.location.href = 'https://fanfestportal-bot.github.io/fanfest-portal/';
         }
     </script>
 </head>
@@ -46,7 +46,7 @@
     </nav>
 
     <main>
-                <!-- ГЛАВНЫЙ ЭКРАН С ПОРТАЛОМ -->
+        <!-- ГЛАВНЫЙ ЭКРАН С ПОРТАЛОМ -->
         <section id="home" class="section hero-section">
             <div class="portal-glow-bg"></div>
             <div class="container">
@@ -55,13 +55,32 @@
                     <h1 class="gothic-title">ФанФест <span class="neon">ПОРТАЛ</span></h1>
                     <p class="subtitle">Среднеуральск<br>31 июля — 2 августа 2026</p>
                     <div class="magic-line"></div>
-                    <p class="description">Это не просто фестиваль. Это переход в другую реальность.</p>
+
+                    <!-- ОПИСАНИЕ ФЕСТИВАЛЯ -->
+                    <div class="fest-description">
+                        <p class="fest-tagline">🎉 ФЕСТИВАЛЬ ХОРОШЕГО НАСТРОЕНИЯ И АКТИВНОГО ОТДЫХА НА ПРИРОДЕ 🎉</p>
+                        <p class="fest-location">Погрузись в атмосферу любимых вселенных в получасе езды от города!</p>
+                        <p class="fest-quote">✨ Это не просто фестиваль. <strong>Это переход в другую реальность</strong> ✨</p>
+
+                        <div class="fest-features">
+                            <div class="feature-item">✨ Фандомные площадки и ролевые игры</div>
+                            <div class="feature-item">🗺️ Увлекательные квесты</div>
+                            <div class="feature-item">🎨 Ярмарка мастеров и авторские сувениры</div>
+                            <div class="feature-item">💃 Танцы, мастер-классы и перформансы</div>
+                            <div class="feature-item">🔥 Общий костёр для тёплых встреч</div>
+                            <div class="feature-item">🎬 Кинотеатр под открытым небом</div>
+                            <div class="feature-item">🍳 Вкуснейшие блюда в Трактире</div>
+                        </div>
+
+                        <p class="fest-universe">🌀 Вселенские знакомства ждут тебя! 🌀</p>
+                    </div>
+
                     <a href="https://сплавимвсех.рф/ank_pm" target="_blank" class="cta-btn">✨ Купить билет ✨</a>
                 </div>
             </div>
         </section>
 
-        <!-- ===== КАК ДОБРАТЬСЯ (ПОЛНАЯ ИНФОРМАЦИЯ) ===== -->
+        <!-- ===== КАК ДОБРАТЬСЯ ===== -->
         <section id="how-to-get" class="section">
             <div class="container">
                 <h2 class="section-title">🗺 Как добраться</h2>
@@ -100,7 +119,7 @@
             </div>
         </section>
 
-        <!-- ===== ПАРКОВКА (ПОЛНАЯ ИНФОРМАЦИЯ) ===== -->
+        <!-- ===== ПАРКОВКА ===== -->
         <section id="parking" class="section">
             <div class="container">
                 <h2 class="section-title">🅿️ Парковка</h2>
@@ -118,7 +137,7 @@
             </div>
         </section>
 
-                <!-- ===== ПРАВИЛА ФЕСТИВАЛЯ (ПОЛНАЯ ИНФОРМАЦИЯ) ===== -->
+        <!-- ===== ПРАВИЛА ФЕСТИВАЛЯ ===== -->
         <section id="rules" class="section">
             <div class="container">
                 <h2 class="section-title">📜 Правила фестиваля</h2>
@@ -197,12 +216,12 @@
             </div>
         </section>
 
-        <!-- ===== ЯРМАРКА (ПОЛНАЯ ИНФОРМАЦИЯ) ===== -->
+        <!-- ===== ЯРМАРКА ===== -->
         <section id="fair" class="section">
             <div class="container">
                 <h2 class="section-title">🎪 Ярмарка Фестиваля</h2>
                 <div class="content-card">
-                    <p style="text-align: center; font-style: italic; margin-bottom: 30px;">Место, где вы можете поразить гостей своим мастерством или найти по-настоящему диковинную вещь!</p>
+                    <p style="text-align: center; font-style: italic; margin-bottom: 30px;">место, где вы можете поразить гостей своим мастерством или найти по-настоящему диковинную вещь!</p>
 
                     <h3>Правила ярмарки</h3>
 
@@ -258,7 +277,7 @@
             </div>
         </section>
 
-        <!-- ===== БИЛЕТЫ (ПОЛНАЯ ИНФОРМАЦИЯ) ===== -->
+        <!-- ===== БИЛЕТЫ ===== -->
         <section id="tickets" class="section">
             <div class="container">
                 <h2 class="section-title">🎟 Участие и оплата</h2>
@@ -270,18 +289,18 @@
                             <h3>🏕 Трёхдневный (31 июля – 2 августа)</h3>
                             <div class="ticket-card"><span>Билет с питанием, с 16 лет (полный)</span><span class="date">до 17 мая</span><span class="price">3 490₽</span></div>
                             <div class="ticket-card"><span>Билет с питанием, с 16 лет (полный)</span><span class="date">18 мая – 26 июля</span><span class="price">3 990₽</span></div>
-                            <div class="ticket-card warning"><span>Билет с питанием, с 16 лет (полный)</span><span class="date">на фестивале</span><span class="price">4 500₽</span></div>
+                            <div class="ticket-card"><span>Билет с питанием, с 16 лет (полный)</span><span class="date">на фестивале</span><span class="price">4 500₽</span></div>
                             <div class="ticket-card"><span>Билет с питанием, от 12 до 15 лет (детский)</span><span class="date">до 17 мая</span><span class="price">2 490₽</span></div>
                             <div class="ticket-card"><span>Билет с питанием, от 12 до 15 лет (детский)</span><span class="date">18 мая – 26 июля</span><span class="price">2 990₽</span></div>
-                            <div class="ticket-card warning"><span>Билет с питанием, от 12 до 15 лет (детский)</span><span class="date">на фестивале</span><span class="price">3 500₽</span></div>
+                            <div class="ticket-card"><span>Билет с питанием, от 12 до 15 лет (детский)</span><span class="date">на фестивале</span><span class="price">3 500₽</span></div>
                         </div>
 
                         <div class="ticket-type">
                             <h3>🎪 Однодневный (1 августа)</h3>
                             <div class="ticket-card"><span>Билет с питанием, с 16 лет (полный)</span><span class="date">до 26 июля</span><span class="price">2 490₽</span></div>
-                            <div class="ticket-card warning"><span>Билет с питанием, с 16 лет (полный)</span><span class="date">на фестивале</span><span class="price">3 000₽</span></div>
+                            <div class="ticket-card"><span>Билет с питанием, с 16 лет (полный)</span><span class="date">на фестивале</span><span class="price">3 000₽</span></div>
                             <div class="ticket-card"><span>Билет с питанием, от 12 до 15 лет (детский)</span><span class="date">до 26 июля</span><span class="price">1 490₽</span></div>
-                            <div class="ticket-card warning"><span>Билет с питанием, от 12 до 15 лет (детский)</span><span class="date">на фестивале</span><span class="price">2 000₽</span></div>
+                            <div class="ticket-card"><span>Билет с питанием, от 12 до 15 лет (детский)</span><span class="date">на фестивале</span><span class="price">2 000₽</span></div>
                         </div>
                     </div>
 
@@ -294,7 +313,7 @@
             </div>
         </section>
 
-                <!-- ===== ПИТАНИЕ / МЕНЮ (ПОЛНАЯ ИНФОРМАЦИЯ) ===== -->
+        <!-- ===== ПИТАНИЕ / МЕНЮ ===== -->
         <section id="menu" class="section">
             <div class="container">
                 <h2 class="section-title">🍽 Питание</h2>
@@ -401,7 +420,6 @@
         <img src="img/boar.png" id="boar" alt="Магический кабан">
         <div class="speech" id="speech">Эй… ты точно готов к порталу?</div>
     </div>
-
 
     <script src="JS/script.js"></script>
 </body>
